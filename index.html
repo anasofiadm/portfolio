@@ -3,123 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+
+    <style>    
+        body{
+             font-family: "Sora", sans-serif;
         }
-        .sidebar {
-            width: 20%;
-            background-color: #343a40;
-            padding-top: 20px;
+        .tags {
+            margin-top: 10px;
         }
-        .sidebar button {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            background: #343a40;
-            color: white;
-            text-align: left;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        .sidebar button:hover {
-            background-color: #495057;
-        }
-        .content {
-            width: 80%;
-            padding: 20px;
-            text-align: center;
-            background-color: #f9f9f9;
-            overflow-y: auto;
-        }
-        .section {
-            display: none;
-        }
-        .active {
-            display: block;
-        }
-        .section h2 {
-            margin-bottom: 20px;
+        .badge {
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('skills')">Skills</button>
-        <button onclick="showSection('projects')">Projects</button>
-        <button onclick="showSection('contact')">Contact</button>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
-        <!-- About Me Section -->
-        <div id="about" class="section active">
-            <h2>About Me</h2>
-            <p>Hi, I'm a frontend developer passionate about creating clean and efficient web designs.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- Skills Section -->
-        <div id="skills" class="section">
-            <h2>My Skills</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <i class="fab fa-html5 fa-3x text-danger"></i>
-                    <p>HTML5</p>
+    <!-- Hero Section -->
+<section id="hero" class="d-flex align-items-center" style="height: 100vh; background: url('https://via.placeholder.com/1920x1080') no-repeat center center; background-size: cover;">
+    <div class="container text-center">
+        <h1 class="text-white">Hi, I'm Ana Sofía</h1>
+        <h2 class="text-white-50">A front-end developer with a passion for building beautiful and responsive websites</h2>
+        <a href="#projects" class="btn btn-primary btn-lg mt-4">View My Work</a>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>About Me</h1>
+                <p>Hi, I'm a front-end developer with a passion for building beautiful and responsive websites. Check out some of my work below!</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/400" class="img-fluid" alt="About Me">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container text-center">
+        <h2 class="mb-5">My Skills</h2>
+        <div class="row">
+            <!-- HTML Skill -->
+            <div class="col-md-4">
+                <div class="skill-box">
+                    <i class="fab fa-html5 fa-4x text-danger"></i>
+                    <h4 class="mt-3">HTML5</h4>
                 </div>
-                <div class="col-md-3">
-                    <i class="fab fa-css3-alt fa-3x text-primary"></i>
-                    <p>CSS3</p>
+            </div>
+            <!-- CSS Skill -->
+            <div class="col-md-4">
+                <div class="skill-box">
+                    <i class="fab fa-css3-alt fa-4x text-primary"></i>
+                    <h4 class="mt-3">CSS3</h4>
                 </div>
-                <div class="col-md-3">
-                    <i class="fab fa-bootstrap fa-3x text-purple"></i>
-                    <p>Bootstrap</p>
-                </div>
-                <div class="col-md-3">
-                    <i class="fab fa-js fa-3x text-warning"></i>
-                    <p>JavaScript</p>
+            </div>
+            <!-- Bootstrap Skill -->
+            <div class="col-md-4">
+                <div class="skill-box">
+                    <i class="fab fa-bootstrap fa-4x text-purple"></i>
+                    <h4 class="mt-3">Bootstrap</h4>
                 </div>
             </div>
         </div>
-
-        <!-- Projects Section -->
-        <div id="projects" class="section">
-            <h2>My Projects</h2>
-            <p>Here are some of the projects I've worked on:</p>
-            <ul>
-                <li>Portfolio Website</li>
-                <li>Responsive Web Design</li>
-                <li>JavaScript Calculator</li>
-            </ul>
-        </div>
-
-        <!-- Contact Section -->
-        <div id="contact" class="section">
-            <h2>Contact Me</h2>
-            <p>You can reach me via email at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <div class="row mt-4">
+            <!-- JavaScript Skill -->
+            <div class="col-md-4">
+                <div class="skill-box">
+                    <i class="fab fa-js fa-4x text-warning"></i>
+                    <h4 class="mt-3">JavaScript</h4>
+                </div>
+            </div>
+            <!-- GitHub Pages Skill -->
+            <div class="col-md-4 offset-md-4">
+                <div class="skill-box">
+                    <i class="fab fa-github fa-4x text-dark"></i>
+                    <h4 class="mt-3">GitHub Pages</h4>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
+
+
+    <!-- Filter Section (Optional) -->
+    <div class="text-center my-4">
+        <button class="btn btn-outline-primary filter-btn" data-filter="all">Show All</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="html">HTML</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="css">CSS</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="react">React</button>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+        <h2 class="text-center">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">This is a description of my first project.</p>
+                        <div class="tags">
+                            <span class="badge bg-primary">HTML</span>
+                            <span class="badge bg-success">CSS</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">This is a description of my second project.</p>
+                        <div class="tags">
+                            <span class="badge bg-primary">HTML</span>
+                            <span class="badge bg-info">Bootstrap</span>
+                            <span class="badge bg-danger">SASS</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">This is a description of my third project.</p>
+                        <div class="tags">
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-success">Node.js</span>
+                            <span class="badge bg-dark">MongoDB</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <!-- JavaScript (Bootstrap and Custom Script) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            var sections = document.getElementsByClassName('section');
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].classList.remove('active');
-            }
+        // JavaScript to filter projects by tags
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
 
-            // Show the selected section
-            document.getElementById(sectionId).classList.add('active');
-        }
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const cardTags = Array.from(card.querySelectorAll('.badge')).map(tag => tag.textContent.toLowerCase());
+
+                    if (filter === 'all' || cardTags.includes(filter)) {
+                        card.parentElement.style.display = 'block';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
-
 </body>
 </html>
